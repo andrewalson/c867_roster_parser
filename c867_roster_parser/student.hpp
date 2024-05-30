@@ -8,7 +8,7 @@ class Student {
 public:
     // no default constructor according to project requirements
     // paramaterized constructor
-    Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysPerCourse[], DegreeProgram degreeProgram);
+    Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysCourse1, int daysCourse2, int daysCourse3, DegreeProgram degreeProgram);
     
     // declaring getters (accessors)
     string getStudentID();

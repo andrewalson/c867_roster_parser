@@ -29,6 +29,7 @@
 		F6B1AE192C07FFD900FDAF33 /* student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = student.cpp; sourceTree = "<group>"; };
 		F6B1AE1A2C07FFD900FDAF33 /* student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = student.hpp; sourceTree = "<group>"; };
 		F6B1AE1D2C08001800FDAF33 /* degree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = degree.hpp; sourceTree = "<group>"; };
+		F6B1AE212C08062A00FDAF33 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +46,7 @@
 		F6B1AE062C07F30400FDAF33 = {
 			isa = PBXGroup;
 			children = (
+				F6B1AE212C08062A00FDAF33 /* README.md */,
 				F6B1AE112C07F30400FDAF33 /* c867_roster_parser */,
 				F6B1AE102C07F30400FDAF33 /* Products */,
 			);

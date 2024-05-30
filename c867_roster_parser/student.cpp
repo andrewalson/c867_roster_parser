@@ -5,17 +5,17 @@
 using namespace std;
 
 // defining paramaterized student constructor
-Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysPerCourse[], DegreeProgram degreeProgram) {
+Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysCourse1, int daysCourse2, int daysCourse3, DegreeProgram degreeProgram) {
     this->studentID = studentID;
     this->firstName = firstName;
     this->lastName = lastName;
     this->emailAddress = emailAddress;
     this->age = age;
     this->degreeProgram = degreeProgram;
-    // we know there will always be three courses/days values
-    this->daysPerCourse[0] = daysPerCourse[0];
-    this->daysPerCourse[1] = daysPerCourse[1];
-    this->daysPerCourse[2] = daysPerCourse[2];
+    // we know there will always be three days/course values passed to us individually
+    this->daysPerCourse[0] = daysCourse1;
+    this->daysPerCourse[1] = daysCourse2;
+    this->daysPerCourse[2] = daysCourse3;
     }
 
 // defining getters (accessors)
