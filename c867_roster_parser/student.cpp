@@ -5,17 +5,17 @@
 using namespace std;
 
 // defining paramaterized student constructor
-Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysCourse1, int daysCourse2, int daysCourse3, DegreeProgram degreeProgram) {
+Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) {
     this->studentID = studentID;
     this->firstName = firstName;
     this->lastName = lastName;
     this->emailAddress = emailAddress;
     this->age = age;
     this->degreeProgram = degreeProgram;
-    // we know there will always be three days/course values passed to us individually
-    this->daysPerCourse[0] = daysCourse1;
-    this->daysPerCourse[1] = daysCourse2;
-    this->daysPerCourse[2] = daysCourse3;
+    // we know there will be three days/course values passed to us individually
+    this->daysInCourse[0] = daysInCourse1;
+    this->daysInCourse[1] = daysInCourse2;
+    this->daysInCourse[2] = daysInCourse3;
     }
 
 // defining getters (accessors)
@@ -38,8 +38,8 @@ int Student::getAge() {
     return age;
 }
 
-int Student::getDaysPerCourse(int arrayPosition) {
-    return daysPerCourse[arrayPosition];
+int Student::getDaysInCourse(int arrayPosition) {
+    return daysInCourse[arrayPosition];
 }
 
 DegreeProgram Student::getDegreeProgram() {
@@ -67,17 +67,14 @@ void Student::setAge(int newAge) {
     this->age = newAge;
 }
 
-void Student::setDaysPerCourse(int newDaysPerCourse, int arrayPosition) {
-    this->daysPerCourse[arrayPosition] = newDaysPerCourse;
+void Student::setDaysInCourse(int newDaysInCourse, int arrayPosition) {
+    this->daysInCourse[arrayPosition] = newDaysInCourse;
 }
 
-void Student::setAllDaysPerCourses(int newDaysPerCourse[]) {
-    daysPerCourse[0] = newDaysPerCourse[0];
-    daysPerCourse[1] = newDaysPerCourse[1];
-    daysPerCourse[2] = newDaysPerCourse[2];
-//    for (int i = 0; i < DaysInCourseArraySize; i++) {
-//        this->daysPerCourse[i] = newDaysPerCourse[i];
-//    }
+void Student::setAllDaysInCourses(int newDaysInCourse[]) {
+    daysInCourse[0] = newDaysInCourse[0];
+    daysInCourse[1] = newDaysInCourse[1];
+    daysInCourse[2] = newDaysInCourse[2];
 }
 
 void Student::setDegreeProgram(DegreeProgram newDegreeProgram) {
@@ -86,5 +83,5 @@ void Student::setDegreeProgram(DegreeProgram newDegreeProgram) {
 
 // print method formatted according to requirements
 void Student::print() {
-    cout << studentID << "\t" << "First Name: " << firstName << "\t" << "Last Name: " << lastName << "\t" << "Age: " << age << "daysInCourse: {" << daysPerCourse[0] << ", " << daysPerCourse[1] << ", " << daysPerCourse[2] << "} Degree Program: " << endl;
+    cout << studentID << "\t" << "First Name: " << firstName << "\t" << "Last Name: " << lastName << "\t" << "Age: " << age << "daysInCourse: {" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "} Degree Program: " << endl;
 }

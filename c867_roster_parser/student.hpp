@@ -2,13 +2,13 @@
 #include <iostream>
 #include <string>
 #include "degree.hpp"
-using std::string;
+using namespace std;
 
 class Student {
 public:
     // no default constructor according to project requirements
     // paramaterized constructor
-    Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysCourse1, int daysCourse2, int daysCourse3, DegreeProgram degreeProgram);
+    Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
     
     // declaring getters (accessors)
     string getStudentID();
@@ -16,7 +16,7 @@ public:
     string getLastName();
     string getEmailAddress();
     int getAge();
-    int getDaysPerCourse(int arrayPosition);
+    int getDaysInCourse(int arrayPosition);
     DegreeProgram getDegreeProgram();
     
     // setters (mutators)
@@ -25,8 +25,8 @@ public:
     void setLastName(string newLastName);
     void setEmailAddress(string newEmailAddress);
     void setAge(int newAge);
-    void setDaysPerCourse(int newDaysPerCourse, int arrayPosition);
-    void setAllDaysPerCourses(int newDaysPerCourse[]);
+    void setDaysInCourse(int newDaysInCourse, int arrayPosition);
+    void setAllDaysInCourses(int neDaysInCourse[]);
     void setDegreeProgram(DegreeProgram degreeProgram);
     
     // print method
@@ -42,6 +42,6 @@ private:
     string lastName;
     string emailAddress;
     int age;
-    int daysPerCourse[3];
+    int daysInCourse[3];
     DegreeProgram degreeProgram;
 };
