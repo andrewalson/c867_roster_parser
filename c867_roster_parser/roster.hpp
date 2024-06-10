@@ -1,5 +1,6 @@
 #pragma once
 #include <stdio.h>
+#include <iostream>
 #include "student.hpp"
 using namespace std;
 
@@ -22,5 +23,5 @@ public:
     
 private:
     // to make using roster array easier
-    int classSize = -1;
+    int index = -1;
 };
