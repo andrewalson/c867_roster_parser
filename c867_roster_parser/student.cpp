@@ -1,10 +1,8 @@
 #include "student.hpp"
 #include "degree.hpp"
-#include <iostream>
-#include <string>
 using namespace std;
 
-// defining paramaterized student constructor
+// Defining paramaterized student constructor
 Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) {
     this->studentID = studentID;
     this->firstName = firstName;
@@ -12,13 +10,13 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     this->emailAddress = emailAddress;
     this->age = age;
     this->degreeProgram = degreeProgram;
-    // we know there will be three days/course values passed to us individually
+    // We know there will be three days/course values passed to us individually
     this->daysInCourse[0] = daysInCourse1;
     this->daysInCourse[1] = daysInCourse2;
     this->daysInCourse[2] = daysInCourse3;
     }
 
-// defining getters (accessors)
+// Defining accessors (getters)
 string Student::getStudentID() {
     return studentID;
 }
@@ -46,7 +44,8 @@ DegreeProgram Student::getDegreeProgram() {
     return degreeProgram;
 }
 
-// defining setters (mutators)
+// Defining mutators (setters)
+
 void Student::setStudentID(string newStudentID) {
     this->studentID = newStudentID;
 }
@@ -81,7 +80,7 @@ void Student::setDegreeProgram(DegreeProgram newDegreeProgram) {
     this->degreeProgram = newDegreeProgram;
 }
 
-// print method formatted according to requirements
+// Print method formatted according to requirements
 void Student::print() {
-    cout << studentID << "\t" << "First Name: " << firstName << "\t" << "Last Name: " << lastName << "\t" << "Age: " << age << "daysInCourse: {" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "} Degree Program: " << endl;
+    cout << studentID << "\t" << "First Name: " << firstName << "\t" << "Last Name: " << lastName << "\t" << "Age: " << age << "\t" << "daysInCourse: {" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "} Degree Program: " << strDegreeProgram[degreeProgram] << "." << endl;
 }

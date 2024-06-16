@@ -5,6 +5,9 @@ using namespace std;
 // Manager class
 class Roster {
 public:
+    
+    ~Roster(); // Destructor
+    
     // We know to expect a class size of five students
     const static int expectedStudents = 5;
     Student* classRosterArray[expectedStudents];

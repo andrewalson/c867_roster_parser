@@ -1,6 +1,16 @@
 #include "roster.hpp"
 using namespace std;
 
+// Define destructor to release dynamically allocated memory
+Roster::~Roster() {
+    for (int i = 0; i <= index; i++) {
+        if (classRosterArray[i] != nullptr) {
+            delete classRosterArray[i];
+            classRosterArray[i] = nullptr;
+        }
+    }
+}
+
 // Parse individual student string and call add() to create new student in roster array of student pointers
 void Roster::parse(string student) {
     
